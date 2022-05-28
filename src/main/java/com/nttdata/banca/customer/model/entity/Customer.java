@@ -12,28 +12,28 @@ import java.util.List;
 @Table(name = "customers") // plural
 @Getter
 @Setter
-public class Customer { // singular
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+public class Customer { // singula
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
-	@Column(name = "last_name", length = 40, nullable = false)
-	private String lastName;
+  @Column(name = "last_name", length = 40, nullable = false)
+  private String lastName;
 
-	@Column(name = "first_name", length = 40, nullable = false)
-	private String firstName;
+  @Column(name = "first_name", length = 40, nullable = false)
+  private String firstName;
 
-	@Column(name = "dni", length = 8, nullable = false)
-	private String dni;
+  @Column(name = "dni", length = 8, nullable = false)
+  private String dni;
 
-	@Column(name = "birthday")
-	@Temporal(TemporalType.DATE)
-	private Date birthday;
+  @Column(name = "birthday")
+  @Temporal(TemporalType.DATE)
+  private Date birthday;
 
-	@Column(name = "age", columnDefinition = "tinyint")
-	private Integer age;
+  @Column(name = "age", columnDefinition = "tinyint")
+  private Integer age;
 
-	@OneToMany(mappedBy = "customer")
-	private List<Account> accounts;
+  @OneToMany(mappedBy = "customer" )
+  private List<Account> accounts;
 
 }
