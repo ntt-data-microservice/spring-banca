@@ -18,6 +18,10 @@ public class JuanFloresMoroco { // Upper Camel Case
   @Column(name = "type_account", length = 20)
   private String typeAccount;
 
+  @Column(name = "create_at")
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date createAt;
+
   @Column(name = "update_at")
   @Temporal(TemporalType.TIMESTAMP)
   private Date updateAt;
