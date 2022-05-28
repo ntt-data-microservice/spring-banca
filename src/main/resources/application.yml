@@ -9,9 +9,8 @@ spring:
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:bancaDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    platform: h2
     username: sa
-    password: admin
+    password: sasa
   jpa:
     show-sql: true
     hibernate:
@@ -21,4 +20,4 @@ spring:
       hibernate:
         show_sql: true
         use_sql_comments: false
-        format_sql: false
+        format_sql: false  sql:    init:      platform: h2
